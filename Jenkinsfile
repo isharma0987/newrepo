@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-       stage ("run frontend") {
+       stage("run frontend") {
            steps {
                 echo 'executing yarn....'
                 nodejs('node-10.17'){
@@ -9,7 +9,7 @@ pipeline {
                 }
            }
        }
-       stage ("run backend") {
+       stage("run backend") {
            steps {
                  echo 'executing gradle....'
                  withGradle() {
